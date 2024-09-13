@@ -19,15 +19,14 @@ davisdata <- read.csv(file="UCDavis.csv")
 
 ## Now with ggplot - first select the basic data
 
-```{r}
-basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
-```
+
 ## Now add in boxplot
 
 ```{r}
-basicCN + geom_boxplot()
+boxplot(alcohol~Seat,data=davisdata)
 ```
-  
+
+The boxes are not disjoint. The median of the box is higher than the front and middle box. The front and middle box are similar in size but there are more outlines in the middle box.  
   
 ### get fancy  
 
