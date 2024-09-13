@@ -49,6 +49,13 @@ summary.aov(model1)
 ```
 
 There is a one in ten thousand chance of receiving these outcomes. To determine which seats differ from the others, more research is now required.
+```{r}
+par(mar = c(3, 8.7, 2, 2))
+plot(TukeyHSD(model1),las=2)
+```
+
+
+The rear and the front are not the same. While the front and middle are distinct from one another, they are not from the back. The front, center, and back are not the same thing.
 
 ## Conclusions
 
