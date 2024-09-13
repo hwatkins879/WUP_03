@@ -26,17 +26,24 @@ davisdata <- read.csv(file="UCDavis.csv")
 boxplot(alcohol~Seat,data=davisdata)
 ```
 
-The boxes are not disjoint. The median of the box is higher than the front and middle box. The front and middle box are similar in size but there are more outlines in the middle box.  
-  
-### get fancy  
+The boxes are not disjoint. The median of the box is higher than the front and middle box. The front and middle box are similar in size but there are more outlines in the middle box. 
 
-```{r}
-basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
-```
+
+
 
 ## Numerical Summarys 
 
+
+
+```{r}
+favstats(momheight~Sex,data=ucdavis1)
+```
+
+
+When it comes to the amount of persons who are drinking, the back has more than twice as many as the front. According to this summary, the back seat could hold up to 55 drinks, which is twice as much as the front and middle seats combined, even though there were only 32 persons occupying it. The front seat has roughly two drinks, the rear seat has a median of about three, and the back seat has an average of 9.5 drinks.  
+
 ## Inferential Tests
+
 
 ## Conclusions
 
